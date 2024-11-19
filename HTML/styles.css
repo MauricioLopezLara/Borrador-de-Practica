@@ -7,9 +7,9 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #E5E5E5;
     color: #333;
-    padding: 0 20px;
+    padding: 0;
 }
 
 /* Navbar */
@@ -50,11 +50,11 @@ body {
 }
 
 .nav-links li a:hover {
-    color: #007BFF;
+    color: #4D8A8F;
 }
 
 .login-btn {
-    background: #007BFF;
+    background: #0b98a4;
     color: #fff;
     padding: 5px 15px;
     border-radius: 20px;
@@ -63,7 +63,7 @@ body {
 }
 
 .login-btn:hover {
-    background: #0056b3;
+    background: #1e484c;
 }
 
 /* Apartado de búsqueda */
@@ -76,7 +76,7 @@ body {
 
 .background-image {
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     filter: brightness(0.7);
 }
@@ -119,8 +119,9 @@ body {
     outline: none;
 }
 
+/* Pasar el mouse */
 .search-bar button {
-    background: #007BFF;
+    background-image: linear-gradient(135deg, #56A3A8 0%, #295255 100%);
     color: #fff;
     border: none;
     padding: 8px 15px;
@@ -130,6 +131,26 @@ body {
     transition: background 0.3s ease;
 }
 
-.search-bar button:hover {
-    background: #0056b3;
+/* Sección de servicios */
+
+.fondo-container {
+  
+
 }
+
+.fondo-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #295255;
+}
+
+.fondo-container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #295255;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
