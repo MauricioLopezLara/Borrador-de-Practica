@@ -22,7 +22,7 @@ html {
 /* ********************************** */
 .container-navbar {
 
-background: -webkit-linear-gradient(204deg, #186ec3,#2a9575,#040643);/* Chrome 10-25, Safari 5.1-6 */                          
+background: #000;       
                                         
 }
 
@@ -79,15 +79,79 @@ background: -webkit-linear-gradient(204deg, #186ec3,#2a9575,#040643);/* Chrome 1
 
 
 /* ********************************** */
-/*               BANNER               */
+/*               Carousel y BANNER               */
 /* ********************************** */
 
 
-/* Carrousel */
+/* Banner de búsqueda */
+.content-banner {
+    position: absolute;
+    top: 300px; /* Ajusta según tu diseño */
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    z-index: 10; /* Asegúrate de que esté por encima del carrusel */
+}
 
+/* Estilos de los encabezados */
+.content-banner h2 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.content-banner h1 {
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+/* Barra de búsqueda con fondo opaco */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    background-color: #fff; /* Fondo con menor opacidad */
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-top: 15px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos de los elementos dentro de la barra de búsqueda */
+.search-bar select,
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #0000004f;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+
+.search-bar span{
+	color: #0000004f;
+	font-size: 1.5rem;
+}
+
+/* Botón de búsqueda */
+.search-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #37ebff;
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Carrusel */
 .carousel {
-    max-height: 60rem; /* Ajusta la altura máxima del carrusel */
+    max-height: 67.5rem; /* Ajusta la altura máxima del carrusel */
     overflow: hidden;
+    position: relative; /* Asegúrate de que esté en su lugar correctamente */
+    z-index: 1; /* Carrusel debajo del banner */
 }
 
 .carousel img {
@@ -109,7 +173,9 @@ background: -webkit-linear-gradient(204deg, #186ec3,#2a9575,#040643);/* Chrome 1
     width: 200px;  /* Aumenta el tamaño del área clickeable */
     height: 200px;  /* Aumenta el tamaño del área clickeable */
     margin-top: 250px;  /* Mueve las flechas hacia abajo */
+    z-index: 5; /* Asegúrate de que las flechas estén debajo del banner */
 }
+
 
 
 
