@@ -10,7 +10,11 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
+<<<<<<< HEAD
   background: linear-gradient(to bottom, #9ccacc, #9fc6d8); 
+=======
+  background: linear-gradient(to bottom, #58d7de, #5c8bd5); 
+>>>>>>> b32a81811dd47ff7861e54f0f47308c8db39183d
   font-family: 'Poppins', sans-serif;
 }
 
