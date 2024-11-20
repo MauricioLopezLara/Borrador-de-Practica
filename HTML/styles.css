@@ -205,14 +205,6 @@ background: -webkit-linear-gradient(204deg, #186ec3,#2a9575,#040643);/* Chrome 1
 /* ********************************** */
 /*               BANNER               */
 /* ********************************** */
-.banner {
-	background-image: linear-gradient(100deg, #000000, #00000020),
-		url('Images/Room-menu.png');
-	height: 60rem;
-	background-size: cover;
-	background-position: center;
-}
-
 
 .search-bar {
     display: flex;
@@ -286,6 +278,22 @@ background: -webkit-linear-gradient(204deg, #186ec3,#2a9575,#040643);/* Chrome 1
 	text-transform: uppercase;
 	border-radius: 3rem;
 }
+
+/* Carrousel */
+
+.carousel {
+    margin-top: 2rem; /* Espacio entre el carrusel y la barra de búsqueda */
+    max-height: 50rem; /* Ajusta la altura máxima del carrusel */
+    overflow: hidden;
+}
+
+.carousel img {
+    object-fit: cover; /* Para ajustar las imágenes al contenedor */
+    height: 100%; 
+}
+
+
+
 
 /* ********************************** */
 /*            MAIN CONTENT            */
