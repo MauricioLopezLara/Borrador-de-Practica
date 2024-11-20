@@ -7,7 +7,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-		<title>Baristas</title>
+		<title>Inmobiliaria</title>
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
@@ -24,15 +24,15 @@
 
 					<div class="container-logo">
 						<i class="fa-solid fa-mug-hot"></i>
-						<h1 class="logo"><a href="/">Baristas</a></h1>
+						<h1 class="logo"><a href="/">Godoy House</a></h1>
 					</div>
 
 					<div class="container-user">
 						<i class="fa-solid fa-user"></i>
 						<i class="fa-solid fa-basket-shopping"></i>
 						<div class="content-shopping-cart">
-							<span class="text">Carrito</span>
-							<span class="number">(0)</span>
+							<span class="text"></span>
+							<span class="number"></span>
 						</div>
 					</div>
 				</div>
@@ -43,28 +43,34 @@
 					<i class="fa-solid fa-bars"></i>
 					<ul class="menu">
 						<li><a href="#">Inicio</a></li>
-						<li><a href="#">Moca Helado</a></li>
-						<li><a href="#">Expreso</a></li>
-						<li><a href="#">Capuchino</a></li>
-						<li><a href="#">Más</a></li>
+						<li><a href="#">Propiedades</a></li>
+						<li><a href="#">Publicar</a></li>
+						<li><a href="#">Registrarse</a></li>
+						<li><a href="#">Iniciar Sesión</a></li>
 						<li><a href="#">Blog</a></li>
 					</ul>
-
-					<form class="search-form">
-						<input type="search" placeholder="Buscar..." />
-						<button class="btn-search">
-							<i class="fa-solid fa-magnifying-glass"></i>
-						</button>
-					</form>
 				</nav>
 			</div>
 		</header>
-
 		<section class="banner">
 			<div class="content-banner">
-				<p>Café Delicioso</p>
-				<h2>100% Natural <br />Café Fresco</h2>
-				<a href="#">Comprar ahora</a>
+				<h2>¡Encuentra la propiedad que buscas!</h2>
+                <h1>Busca propiedades por tipo de operación, ubicación y rango de precio.</h1>
+                <div class="search-bar">
+                    <select>
+                        <option>Casas</option>
+                        <option>Departamentos</option>
+                        <option>Oficinas</option>
+                    </select>
+                    <span>en</span>
+                    <select>
+                        <option>Venta</option>
+                        <option>Renta</option>
+                    </select>
+                    <span>en</span>
+                    <input type="text" placeholder="Ingresa Ciudad o Estado">
+                    <button class="search-button">🔍 Buscar</button>
+                </div>
 			</div>
 		</section>
 
@@ -131,7 +137,7 @@
 					<!-- Producto 1 -->
 					<div class="card-product">
 						<div class="container-img">
-							<img src="img/cafe-irish.jpg" alt="Cafe Irish" />
+							<img src="Images/cafe-irish.jpg" alt="Cafe Irish" />
 							<span class="discount">-13%</span>
 							<div class="button-group">
 								<span>
@@ -164,7 +170,7 @@
 					<div class="card-product">
 						<div class="container-img">
 							<img
-								src="img/cafe-ingles.jpg"
+								src="Images/cafe-ingles.jpg"
 								alt="Cafe incafe-ingles.jpg"
 							/>
 							<span class="discount">-22%</span>
@@ -199,7 +205,7 @@
 					<div class="card-product">
 						<div class="container-img">
 							<img
-								src="img/cafe-australiano.jpg"
+								src="Images/cafe-australiano.jpg"
 								alt="Cafe Australiano"
 							/>
 							<div class="button-group">
@@ -232,7 +238,7 @@
 					<!--  -->
 					<div class="card-product">
 						<div class="container-img">
-							<img src="img/cafe-helado.jpg" alt="Cafe Helado" />
+							<img src="Images/cafe-helado.jpg" alt="Cafe Helado" />
 							<div class="button-group">
 								<span>
 									<i class="fa-regular fa-eye"></i>
@@ -265,23 +271,23 @@
 
 			<section class="gallery">
 				<img
-					src="img/gallery1.jpg"
+					src="Images/gallery1.jpg"
 					alt="Gallery Img1"
 					class="gallery-img-1"
 				/><img
-					src="img/gallery2.jpg"
+					src="Images/gallery2.jpg"
 					alt="Gallery Img2"
 					class="gallery-img-2"
 				/><img
-					src="img/gallery3.jpg"
+					src="Images/gallery3.jpg"
 					alt="Gallery Img3"
 					class="gallery-img-3"
 				/><img
-					src="img/gallery4.jpg"
+					src="Images/gallery4.jpg"
 					alt="Gallery Img4"
 					class="gallery-img-4"
 				/><img
-					src="img/gallery5.jpg"
+					src="Images/gallery5.jpg"
 					alt="Gallery Img5"
 					class="gallery-img-5"
 				/>
@@ -294,7 +300,7 @@
 					<!-- Producto 1 -->
 					<div class="card-product">
 						<div class="container-img">
-							<img src="img/cafe-irish.jpg" alt="Cafe Irish" />
+							<img src="Images/cafe-irish.jpg" alt="Cafe Irish" />
 							<span class="discount">-13%</span>
 							<div class="button-group">
 								<span>
@@ -327,7 +333,7 @@
 					<div class="card-product">
 						<div class="container-img">
 							<img
-								src="img/cafe-ingles.jpg"
+								src="Images/cafe-ingles.jpg"
 								alt="Cafe incafe-ingles.jpg"
 							/>
 							<span class="discount">-22%</span>
@@ -361,7 +367,7 @@
 					<!--  -->
 					<div class="card-product">
 						<div class="container-img">
-							<img src="img/cafe-viena.jpg" alt="Cafe Viena" />
+							<img src="Images/cafe-viena.jpg" alt="Cafe Viena" />
 							<span class="discount">-30%</span>
 							<div class="button-group">
 								<span>
@@ -393,7 +399,7 @@
 					<!--  -->
 					<div class="card-product">
 						<div class="container-img">
-							<img src="img/cafe-liqueurs.jpg" alt="Cafe Liqueurs" />
+							<img src="Images/cafe-liqueurs.jpg" alt="Cafe Liqueurs" />
 							<div class="button-group">
 								<span>
 									<i class="fa-regular fa-eye"></i>
@@ -430,7 +436,7 @@
 				<div class="container-blogs">
 					<div class="card-blog">
 						<div class="container-img">
-							<img src="img/blog-1.jpg" alt="Imagen Blog 1" />
+							<img src="Images/blog-1.jpg" alt="Imagen Blog 1" />
 							<div class="button-group-blog">
 								<span>
 									<i class="fa-solid fa-magnifying-glass"></i>
@@ -455,7 +461,7 @@
 					</div>
 					<div class="card-blog">
 						<div class="container-img">
-							<img src="img/blog-2.jpg" alt="Imagen Blog 2" />
+							<img src="Images/blog-2.jpg" alt="Imagen Blog 2" />
 							<div class="button-group-blog">
 								<span>
 									<i class="fa-solid fa-magnifying-glass"></i>
@@ -480,7 +486,7 @@
 					</div>
 					<div class="card-blog">
 						<div class="container-img">
-							<img src="img/blog-3.jpg" alt="Imagen Blog 3" />
+							<img src="Images/blog-3.jpg" alt="Imagen Blog 3" />
 							<div class="button-group-blog">
 								<span>
 									<i class="fa-solid fa-magnifying-glass"></i>
@@ -582,7 +588,7 @@
 						Desarrollado por Programación para el mundo &copy; 2022
 					</p>
 
-					<img src="img/payment.png" alt="Pagos">
+					<img src="Images/payment.png" alt="Pagos">
 				</div>
 			</div>
 		</footer>
