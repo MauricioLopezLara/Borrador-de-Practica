@@ -1,22 +1,17 @@
 const sql = require('mssql');
 
 const config = {
-    server: 'localhost', // Nombre del servidor o dirección IP
-    port: 1433,          // Cambia este valor al puerto que usa tu SQL Server
-    database: 'Inmobiliaria', // Nombre de la base de datos
+    server: 'localhost', // Cambia si usas otro servidor o IP
+    port: 1433,          // Cambia si usas otro puerto
+    database: 'Inmobiliaria',
+    user: 'MiUsuario',         // Usuario creado en SQL Server
+    password: 'MiContraseñaSegura', // Contraseña definida
     options: {
-        encrypt: false,         // En Windows, generalmente no necesitas cifrado
-        enableArithAbort: true  // Recomendado para evitar problemas con ciertas consultas
-    },
-    authentication: {
-        type: 'ntlm',           // Usar autenticación de Windows
-        options: {
-            domain: 'LPK',      // Dominio de tu máquina o red
-            userName: 'krnd_',  // Nombre de usuario de Windows
-            password: '04092003' // Contraseña del usuario de Windows
-        }
+        encrypt: false,        // Desactiva cifrado si no lo necesitas
+        enableArithAbort: true // Recomendado para evitar errores matemáticos
     }
 };
+
 
 // Conectar a SQL Server
 sql.connect(config, err => {
