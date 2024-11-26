@@ -1,39 +1,36 @@
-const jwt = require('jsonwebtoken'); // Para generar tokens JWT
-const User = require('../models/User'); // Modelo de usuario
+const { User } = require('../models/userModel');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
-// Controlador para iniciar sesión
+/**
+ * Controlador para iniciar sesión
+ */
 exports.login = async (req, res) => {
     try {
-        const { email, password } = req.body; // Extraemos el correo y la contraseña del cuerpo de la solicitud
+        const { email, password } = req.body;
 
-        // Validar campos obligatorios
-        if (!email || !password) {
-            return res.status(400).json({ message: 'Todos los campos son obligatorios' });
-        }
-
-        // Buscar el usuario en la base de datos por correo
-        const user = await User.findOne({ email });
+        // Verificar si el usuario existe
+        const user = await User.findOne({ where: { email } });
         if (!user) {
-            return res.status(404).json({ message: 'Usuario no encontrado' }); // Si el usuario no existe
+            return res.status(404).json({ message: 'Usuario no encontrado' });
         }
 
-        // Verificar si la contraseña proporcionada es válida
-        const isPasswordValid = await user.comparePassword(password);
-        if (!isPasswordValid) {
-            return res.status(401).json({ message: 'Credenciales incorrectas' }); // Si la contraseña no coincide
+        // Verificar contraseña
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(401).json({ message: 'Contraseña incorrecta' });
         }
 
-        // Generar un token JWT para el usuario
+        // Generar token JWT
         const token = jwt.sign(
-            { id: user._id, role: user.role }, // Datos que queremos incluir en el token
-            process.env.JWT_SECRET, // Llave secreta para firmar el token
-            { expiresIn: '1h' } // Tiempo de expiración del token (1 hora en este caso)
+            { id: user.id, role: user.role },
+            process.env.JWT_SECRET || 'secret',
+            { expiresIn: '1h' }
         );
 
-        // Respuesta exitosa con el token
-        res.status(200).json({ token, message: 'Inicio de sesión exitoso' });
+        res.status(200).json({ message: 'Inicio de sesión exitoso', token });
     } catch (error) {
-        console.error('Error en el inicio de sesión:', error);
-        res.status(500).json({ message: 'Error en el servidor' }); // Error genérico del servidor
+        console.error(error);
+        res.status(500).json({ message: 'Error al iniciar sesión' });
     }
 };
